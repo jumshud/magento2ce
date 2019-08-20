@@ -42,7 +42,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
         $setup->getConnection()
             ->addColumn(
                 $setup->getTable(self::TABLE_NAME),
-                'name',
+                'description',
                 [
                     'type' => Table::TYPE_TEXT,
                     'length' => '1k',
