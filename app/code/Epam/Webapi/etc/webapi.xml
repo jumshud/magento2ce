@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Test Service -->
+    <route url="/V1/epam/customers" method="GET">
+        <service class="Epam\Webapi\Api\TestServiceInterface" method="listCustomers"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
