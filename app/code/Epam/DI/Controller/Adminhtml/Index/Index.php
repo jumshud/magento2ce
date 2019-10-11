@@ -16,6 +16,10 @@ class Index extends Action
     */
     private $htmlGenerator;
 
+    /**
+     * @param Context $context
+     * @param HtmlGenerator $htmlGenerator
+     */
     public function __construct(Context $context, HtmlGenerator $htmlGenerator)
     {
         parent::__construct($context);

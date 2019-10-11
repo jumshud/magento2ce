@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Epam\DI\Api;
 
@@ -7,12 +8,6 @@ namespace Epam\DI\Api;
 */
 interface HtmlGenerator
 {
-    /**
-     * @param CustomInterface $custom
-     * @return void
-     */
-    public function __construct(CustomInterface $custom);
-
     /**
      * @return string
      */
