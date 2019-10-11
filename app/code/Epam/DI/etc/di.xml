@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Epam\DI\Api\CustomInterface" type="Epam\DI\Model\CustomService" />
+    <preference for="Epam\DI\Api\HtmlGenerator" type="Epam\DI\Model\HtmlService" />
+
+    <type name="Epam\DI\Api\CustomInterface">
+        <arguments>
+            <argument name="text" xsi:type="string">for Common</argument>
+            <argument name="items" xsi:type="array">
+                <item name="item1" xsi:type="string">Item 1</item>
+                <item name="item2" xsi:type="string">Item 2</item>
+                <item name="item3" xsi:type="string">Item 3</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Epam\DI\Api\HtmlGenerator">
+        <arguments>
+            <argument name="custom" xsi:type="object">Epam\DI\Api\CustomInterface</argument>
+        </arguments>
+    </type>
+</config>
