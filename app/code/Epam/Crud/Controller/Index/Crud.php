@@ -15,6 +15,10 @@ class Crud extends Action
      */
     private $entityRepository;
 
+    /**
+     * @param Context $context
+     * @param EntityRepositoryInterface $entityRepository
+     */
     public function __construct(Context $context, EntityRepositoryInterface $entityRepository)
     {
         parent::__construct($context);

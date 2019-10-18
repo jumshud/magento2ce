@@ -20,6 +20,11 @@ class Read extends Action
      */
     private $criteriaBuilder;
 
+    /**
+     * @param Context $context
+     * @param EntityRepositoryInterface $entityRepository
+     * @param SearchCriteriaBuilder $criteriaBuilder
+     */
     public function __construct(
         Context $context,
         EntityRepositoryInterface $entityRepository,

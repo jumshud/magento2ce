@@ -6,6 +6,7 @@ namespace Epam\Crud\Controller\Index;
 use Epam\Crud\Model\ResourceModel\Entity\CollectionFactory;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
+use Magento\Framework\Controller\ResultFactory;
 
 class Index extends Action
 {
@@ -14,6 +15,10 @@ class Index extends Action
      */
     private $collectionFactory;
 
+    /**
+     * @param Context $context
+     * @param CollectionFactory $collectionFactory
+     */
     public function __construct(Context $context, CollectionFactory $collectionFactory)
     {
         parent::__construct($context);
@@ -28,7 +33,8 @@ class Index extends Action
     {
         $collection = $this->collectionFactory->create();
         $collection->addFieldToFilter('entity_id', ['eq' => 3]);
+        $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
 
-        $this->getResponse()->appendBody(json_encode($collection->getData()[0]));
+        return $result->setData($collection->getData()[0]);
     }
 }

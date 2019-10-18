@@ -43,6 +43,13 @@ class EntityRepository implements EntityRepositoryInterface
      */
     private $collectionProcessor;
 
+    /**
+     * @param EntityFactory $objectFactory
+     * @param EntityResource $objectResourceModel
+     * @param CollectionFactory $collectionFactory
+     * @param SearchResultsInterfaceFactory $searchResultsFactory
+     * @param CollectionProcessorInterface $collectionProcessor
+     */
     public function __construct(
         EntityFactory $objectFactory,
         EntityResource $objectResourceModel,
@@ -60,7 +67,7 @@ class EntityRepository implements EntityRepositoryInterface
     /**
      * @param EntityInterface $object
      *
-     * @return mixed
+     * @return EntityInterface
      *
      * @throws CouldNotSaveException
      * @throws Exception

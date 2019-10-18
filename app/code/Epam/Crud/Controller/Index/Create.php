@@ -20,6 +20,11 @@ class Create extends Action
      */
     private $entityFactory;
 
+    /**
+     * @param Context $context
+     * @param EntityRepositoryInterface $entityRepository
+     * @param EntityFactory $entityFactory
+     */
     public function __construct(
         Context $context,
         EntityRepositoryInterface $entityRepository,
