@@ -1,0 +1,34 @@
+<div class="block-content" data-mage-init='{"Epam_FrontendBasicsJs/js/matched-words-component": {"button":"#btn-match1"}}'>
+    <form class="form matched-words" method="post" id="matched-words-form">
+        <fieldset class="fieldset login" data-hasrequired="<?= $block->escapeHtml(__('* Required Fields')) ?>">
+            <div class="field note"><?= $block->escapeHtml(__('Enter words into input fields below to match.')) ?></div>
+            <div class="field matches-one required">
+                <label class="label" for="id-matches-one"><span><?= $block->escapeHtml(__('Field one')) ?></span></label>
+                <div class="control">
+                    <input name="filed1" value="" id="id-matches-one" type="text" class="input-text" title="<?= $block->escapeHtmlAttr(__('Field one')) ?>" />
+                </div>
+            </div>
+            <div class="field matches-two required">
+                <label class="label" for="id-matches-two"><span><?= $block->escapeHtml(__('Field two')) ?></span></label>
+                <div class="control">
+                    <input name="filed2" value="" id="id-matches-two" type="text" class="input-text" title="<?= $block->escapeHtmlAttr(__('Field two')) ?>" />
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary"><button type="button" class="action primary" id="btn-match1"><span><?= $block->escapeHtml(__('Match')) ?></span></button></div>
+                <div class="secondary"><button class="action remind" type="button" id="btn-match2"><span><?= $block->escapeHtml(__('Match now')) ?></span></button></div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script type="text/x-magento-init">
+    {
+        ".matched-words": {
+            "mwComponentAlias": {
+                "button":"#btn-match2"
+            }
+        }
+    }
+</script>
+
