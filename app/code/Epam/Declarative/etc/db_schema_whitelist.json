@@ -1,0 +1,15 @@
+{
+  "epam_table_snippet2": {
+    "column": {
+      "entity_id": true,
+      "name": true,
+      "created_at": true,
+      "updated_at": true,
+      "is_active": true,
+      "description": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}
