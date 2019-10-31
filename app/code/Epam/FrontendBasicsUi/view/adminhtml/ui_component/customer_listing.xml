@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="customer_columns">
+        <column name="email" component="Epam_FrontendBasicsUi/js/colorColumn">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="bodyTmpl" xsi:type="string">Epam_FrontendBasicsUi/color-column.html</item>
+                    <item name="color" xsi:type="string">yellow</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Custom Email</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
